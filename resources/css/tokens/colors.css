@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+    --color-background: #fbf9f7;
+    --color-surface: #ffffff;
+    --color-on-background: #1b1c1b;
+    --color-on-surface: #1b1c1b;
+    --color-on-surface-variant: #6b6b6b;
+    --color-primary: #705838;
+    --color-primary-container: #8a6d48;
+    --color-on-primary: #ffffff;
+    --color-secondary: #6b7280;
+    --color-outline: #b0a99f;
+    --color-outline-variant: #d8d2c8;
+    --color-error: #ba1a1a;
+    --color-error-container: #fbe9e7;
+    --color-on-error-container: #7a1d1d;
+
+    --rounded-default: 0.5rem;
+    --rounded-md: 0.75rem;
+
+    --font-family-display: 'Manrope', sans-serif;
+    --font-family-body: 'Work Sans', sans-serif;
+}

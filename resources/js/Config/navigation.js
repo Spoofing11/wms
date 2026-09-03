@@ -1,0 +1,90 @@
+import {
+    IconDashboard,
+    IconPackage,
+    IconTag,
+    IconTruck,
+    IconUsers,
+    IconBuildingWarehouse,
+    IconPackages,
+    IconArrowsRightLeft,
+    IconClipboardCheck,
+    IconPackageImport,
+    IconPackageExport,
+    IconTransfer,
+    IconRepeat,
+    IconReport,
+    IconUsersGroup,
+    IconShield,
+    IconActivity,
+    IconMapPin,
+    IconBuilding,
+    IconClipboardList,
+    IconInbox,
+    IconShoppingCart,
+} from '@tabler/icons-react';
+
+export const navigation = [
+    {
+        label: 'Dashboard',
+        route: 'dashboard',
+        icon: IconDashboard,
+        permissions: [],
+    },
+    {
+        label: 'Master Data',
+        icon: IconPackage,
+        permissions: [],
+        children: [
+            { label: 'Kategori', route: 'master.categories.index', icon: IconTag, permissions: ['master.categories.read'] },
+            { label: 'Lokasi', route: 'master.locations.index', icon: IconMapPin, permissions: ['master.locations.read'] },
+            { label: 'Sumber Pembelian', route: 'master.purchase-sources.index', icon: IconTruck, permissions: ['master.purchase-sources.read'] },
+            { label: 'Proyek', route: 'master.projects.index', icon: IconBuilding, permissions: ['master.projects.read'] },
+            { label: 'Data Barang', route: 'master.products.index', icon: IconPackage, permissions: ['master.products.read'] },
+        ],
+    },
+    {
+        label: 'Transaksi',
+        icon: IconTransfer,
+        permissions: [],
+        children: [
+            { label: 'Barang Masuk', route: 'transactions.barang-masuk', icon: IconPackageImport, permissions: ['transaction.barang-masuk.read'] },
+            { label: 'Barang Keluar', route: 'transactions.barang-keluar', icon: IconPackageExport, permissions: ['transaction.barang-keluar.read'] },
+            { label: 'Penyesuaian Stok', route: 'transactions.penyesuaian-stok', icon: IconClipboardCheck, permissions: ['transaction.penyesuaian.read'] },
+            { label: 'Stock Overview', route: 'transactions.stock-overview', icon: IconPackages, permissions: ['transaction.stock-overview.read'] },
+        ],
+    },
+    {
+        label: 'Operasional',
+        icon: IconClipboardList,
+        permissions: [],
+        children: [
+            { label: 'Admin Proyek', route: 'operational.admin-proyek', icon: IconClipboardList, permissions: ['operational.admin-proyek.read'] },
+            { label: 'Permintaan Bahan', route: 'operational.material-requests', icon: IconClipboardList, permissions: ['operational.material-request.read'] },
+            { label: 'Inbox / Approval', route: 'operational.approval', icon: IconInbox, permissions: ['operational.approval.step1', 'operational.approval.step2'] },
+        ],
+    },
+    {
+        label: 'Purchasing',
+        icon: IconShoppingCart,
+        permissions: [],
+        children: [
+            { label: 'Permintaan Pembelian', route: 'purchasing.index', icon: IconShoppingCart, permissions: ['purchasing.read'] },
+        ],
+    },
+    {
+        label: 'Laporan',
+        route: 'reports.index',
+        icon: IconReport,
+        permissions: [],
+    },
+    {
+        label: 'User Management',
+        icon: IconUsersGroup,
+        permissions: [],
+        children: [
+            { label: 'Users', route: 'admin.users.index', icon: IconUsersGroup, permissions: [] },
+            { label: 'Roles & Permissions', route: 'admin.roles.index', icon: IconShield, permissions: [] },
+            { label: 'Activity Log', route: 'admin.activity-log.index', icon: IconActivity, permissions: [] },
+        ],
+    },
+];
